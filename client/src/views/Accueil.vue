@@ -5,8 +5,8 @@ export default defineComponent({
     name: 'Accueil',
     data(){
         return{
-            titreAction: 'placeholder title',
-            actionDate: 'date placeholder'
+            titreAction: 'Donations Centre',
+            actionDate: '19/12/2022'
         }
     }
 })
