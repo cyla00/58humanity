@@ -1,0 +1,65 @@
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+    name: 'Header',
+    data(){
+        return{
+
+        }
+    }
+});
+</script>
+
+<template>
+    <nav>
+        <div id="logo-wrapper">
+            <img src="@/assets/logo.jpeg" alt="">
+        </div>
+        <div id="link-wrapper">
+            <a href="/">Accueil</a>
+            <a href="/nous">Sur Nous</a>
+            <a href="/actions">Nos Actions</a>
+            <a href="/media">Media</a>
+            <a href="/contact">Contact</a>
+            <a href="/donation" id="dons">Faire Une Donation</a>
+        </div>
+    </nav>
+</template>
+
+<style scoped>
+nav{
+    padding: 2em;
+    padding-inline: 5em;
+    display: flex;
+}
+#logo-wrapper{
+    
+}
+img{
+    width: 25em;
+}
+#link-wrapper{
+    margin-block: auto;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+a{
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #0a4874;
+    margin: 1em;
+    text-decoration: none;
+}
+a:hover{
+    transition: 0.1s;
+    color: #73d9d9;
+}
+#dons{
+    color: #f26938;
+}
+#dons:hover{
+    color: #73d9d9;
+}
+</style>
