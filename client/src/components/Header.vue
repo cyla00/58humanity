@@ -17,12 +17,12 @@ export default defineComponent({
             <img src="@/assets/logo.jpeg" alt="">
         </div>
         <div id="link-wrapper">
-            <a href="/">Accueil</a>
-            <a href="/nous">Sur Nous</a>
-            <a href="/actions">Nos Actions</a>
-            <a href="/media">Media</a>
-            <a href="/contact">Contact</a>
-            <a href="/donation" id="dons">Faire Une Donation</a>
+            <router-link to="/">Accueil</router-link>
+            <router-link to="/nous">Sur Nous</router-link>
+            <router-link to="/actions">Nos Actions</router-link>
+            <router-link to="/media">Media</router-link>
+            <router-link to="/contact">Contact</router-link>
+            <router-link to="/donation" id="dons">Faire Une Donation</router-link>
         </div>
     </nav>
 </template>
