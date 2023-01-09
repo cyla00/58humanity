@@ -8,19 +8,22 @@ export default defineComponent({
             titreAction: 'Donations Centre',
             actionDate: '19/12/2022'
         }
-    }
+    },
 })
 </script>
 
 <template>
     <div id="wrapper">
+        
         <div id="inner">
+            
             <h1>Actions <br>  De La Semaine</h1>
             <h3><i class='bx bx-check'></i> {{this.titreAction}}</h3>
             <h3 id="date">{{this.actionDate}}</h3>
-            <button>Participer</button>
+            <router-link to="/contact"><button>Participer</button></router-link>
         </div>
-        <img src="@/assets/mainimg.png" alt="">
+        
+        <img src="@/assets/pic.jpeg" alt="">
     </div>
 </template>
 
@@ -34,11 +37,9 @@ export default defineComponent({
     margin: auto;
 }
 img{
-    width: 45em;
-    position: absolute;
+    width: 35em;
     z-index: 1;
-    bottom: 0;
-    right: 0;
+    margin: auto;
 }
 h1{
     font-size: 5em;
@@ -46,17 +47,17 @@ h1{
     margin-block: 0.2em;
 }
 h3{
-    font-size: 2.2em;
+    font-size: 1.5rem;
     margin: 0;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    width: 15em;
+    width: 25em;
     text-transform: capitalize;
 }
 #date{
     color: #73d9d9;
-    font-size: 2em;
+    font-size: 1rem;
 }
 button{
     font-family: Barlow;

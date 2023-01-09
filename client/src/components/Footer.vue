@@ -15,8 +15,7 @@ export default defineComponent({
     <footer>
         <div class="wrapper">
             <h3>Nous Rejoindre</h3>
-            <a href="/Inscription"><i class='bx bxs-donate-heart bx-sm'></i> Inscription</a>
-            <p><a href="/reglement-interiore">Reglement Interiore</a></p>
+            <router-link to="/contact"><i class='bx bxs-donate-heart bx-sm'></i> Inscription</router-link>
         </div>
 
         <div class="wrapper">
@@ -50,7 +49,8 @@ p{
     font-weight: 400;
 }
 .wrapper{
-    margin: 1em;
+    font-size: 0.8rem;
+    margin: 0.5em;
     margin-inline: 4em;
     text-align: start;
 }

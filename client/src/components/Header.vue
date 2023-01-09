@@ -18,8 +18,7 @@ export default defineComponent({
         </div>
         <div id="link-wrapper">
             <router-link to="/">Accueil</router-link>
-            <router-link to="/nous">Sur Nous</router-link>
-            <router-link to="/actions">Nos Actions</router-link>
+            <router-link to="/nous">L'Asso</router-link>
             <router-link to="/media">Media</router-link>
             <router-link to="/contact">Contact</router-link>
             <router-link to="/donation" id="dons">Faire Une Donation</router-link>
