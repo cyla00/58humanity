@@ -21,13 +21,14 @@ export default defineComponent({
         <div class="wrapper">
             <h3>Resaux</h3>
             <p><i class='bx bxl-instagram bx-sm'></i> @58_humanity</p>
-            <p><i class='bx bxl-snapchat bx-sm'></i> 58_humanity</p>
+            <p><i class='bx bxl-snapchat bx-sm'></i> @humanity-58</p>
+            <p><i class='bx bxl-facebook-square bx-sm'></i> 58 Humanity</p>
         </div>
 
         <div class="wrapper">
             <h3>Contact</h3>
-            <p><i class='bx bxs-envelope bx-sm'></i> Email@mail.com</p>
-            <p><i class='bx bxs-phone bx-sm'></i> 0765643453</p>
+            <p><i class='bx bxs-envelope bx-sm'></i> 58humanity@gmail.com</p>
+            <p><i class='bx bxs-phone bx-sm'></i> 06 60 70 64 11</p>
         </div>
     </footer>
 </template>

@@ -19,8 +19,8 @@ export default defineComponent({
     <div id="wrapper">
 
         <div id="info">
-            <h3><i class='bx bxs-envelope bx-sm'></i> Email@mail.com</h3>
-            <h3><i class='bx bxs-phone bx-sm'></i> 0754567665</h3>
+            <h3><i class='bx bxs-envelope bx-sm'></i> 58humanity@gmail.com</h3>
+            <h3><i class='bx bxs-phone bx-sm'></i> 06 60 70 64 11</h3>
         </div>
 
         <div id="form">
