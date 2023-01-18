@@ -5,7 +5,7 @@ export default defineComponent({
     name: 'Accueil',
     data(){
         return{
-            titreAction: 'Donations Centre',
+            titreAction: 'titre action semaine',
             actionDate: '19/12/2022'
         }
     },
@@ -17,13 +17,13 @@ export default defineComponent({
         
         <div id="inner">
             
-            <h1>Actions <br>  De La Semaine</h1>
+            <h1>Action <br>  De La Semaine</h1>
             <h3><i class='bx bx-check'></i> {{this.titreAction}}</h3>
             <h3 id="date">{{this.actionDate}}</h3>
-            <router-link to="/contact"><button>Participer</button></router-link>
+            <router-link to="/contact"><button>Participer à l'action</button></router-link>
         </div>
         
-        <img src="@/assets/pic.jpeg" alt="">
+        <img src="@/assets/ico.png" alt="">
     </div>
 </template>
 
@@ -68,7 +68,8 @@ button{
     font-size: 1em;
     background: #f26938;
     border: none;
-    box-shadow: black 10px 10px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    border-radius: 100px;
 }
 button:hover{
     transition: 0.1s;

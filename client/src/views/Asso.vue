@@ -217,7 +217,8 @@ button{
     font-size: 1em;
     background: #f26938;
     border: none;
-    box-shadow: black 10px 10px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    border-radius: 100px;
 }
 button:hover{
     transition: 0.1s;
