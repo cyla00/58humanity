@@ -7,16 +7,20 @@ import os from "https://deno.land/x/dos@v0.11.0/mod.ts"
 import { emailSender } from './EmailSender.ts'
 import { jwtMiddleware } from './auth/jwt.ts'
 import { vuejsRouter } from './vuejsRouter.ts'
-import staticFiles from "https://deno.land/x/static_files@1.1.6/mod.ts";
+import staticFiles from "https://deno.land/x/static_files@1.1.6/mod.ts"
 import { adminCheck } from './admin/adminCheck.ts';
 import { createAction } from './actions/createAction.ts'
 import { deleteAction } from './actions/deleteAction.ts'
+import { login } from './admin/login.ts'
+import { listActions } from './actions/listActions.ts'
 
 adminCheck()
 const app = new Application()
 
 app.use(oakCors())
+app.use(login.routes(), login.allowedMethods())
 app.use(emailSender.routes(), emailSender.allowedMethods())
+app.use(listActions.routes(), listActions.allowedMethods())
 
 app.use(jwtMiddleware)
 app.use(createAction.routes(), createAction.allowedMethods())

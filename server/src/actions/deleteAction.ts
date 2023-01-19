@@ -1,18 +1,32 @@
+// takes body "action_id"
+
 import { Router, Status, decode } from '../deps.ts'
 import db from '../database/connection.ts'
 import { ActionSchema } from '../database/interfaces.ts'
 
-
 export const deleteAction = new Router()
-deleteAction.post('/api/delete', async (ctx) => {
+deleteAction.delete('/api/delete', async (ctx) => {
+    const actions = db.collection<ActionSchema>("actions")
+    const body:any = await ctx.request.body()
+    const bodyVal = await body.value
 
-    const token = ctx.request.headers.get("Authorization")
-    if(!token) return ctx.response.status = Status.Unauthorized
-    const cleanedToken = token.split(' ')[1]
+    const actionCheck = await actions.findOne({id: bodyVal.action_id})
+    if(!actionCheck){
+        ctx.response.status = Status.BadRequest
+        return ctx.response.body = {
+            ErrMsg: 'Erreur'
+        }
+    }
 
-    const [header, payload, signature]:Array<any> = decode(cleanedToken)
-
-    if(payload.role !== 'admin') return ctx.response.status = Status.Unauthorized
-    const users = db.collection<ActionSchema>("actions")
-    
+    await actions.deleteOne({id: bodyVal.action_id}).then((res) => {
+        ctx.response.status = Status.OK
+        return ctx.response.body = {
+            SuccMsg: 'Action supprimé avec succès'
+        }
+    }).catch((_e) => {
+        ctx.response.status = Status.InternalServerError
+        return ctx.response.body = {
+            ErrMsg: 'Erreur'
+        }
+    })
 })

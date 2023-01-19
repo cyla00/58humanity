@@ -6,7 +6,9 @@ export default defineComponent({
     data(){
         return{
             titreAction: 'titre action semaine',
-            actionDate: '19/12/2022'
+            actionAddress: 'addresse',
+            actionDate: '19/12/2022',
+            actionTime: '19h20'
         }
     },
 })
@@ -18,8 +20,9 @@ export default defineComponent({
         <div id="inner">
             
             <h1>Action <br>  De La Semaine</h1>
-            <h3><i class='bx bx-check'></i> {{this.titreAction}}</h3>
-            <h3 id="date">ce {{this.actionDate}}</h3>
+            <h3><i class='bx bxs-donate-heart'></i> {{this.titreAction}}</h3>
+            <h3 class="date">{{this.actionAddress}}</h3>
+            <h3 class="date">ce {{this.actionDate}} à {{this.actionTime}}</h3>
             <router-link to="/contact"><button>Participer à l'action</button></router-link>
         </div>
         
@@ -55,7 +58,7 @@ h3{
     width: 25em;
     text-transform: capitalize;
 }
-#date{
+.date{
     color: #73d9d9;
     font-size: 1rem;
 }

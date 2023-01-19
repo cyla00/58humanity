@@ -15,9 +15,8 @@ export default defineComponent({
     <footer>
         <div class="wrapper">
             <h3>Nous Rejoindre</h3>
-            <router-link to="/contact"><i class='bx bxs-donate-heart bx-sm'></i> Contact</router-link>
+            <router-link to="/contact"><i class='bx bxs-face bx-sm'></i> Contact</router-link>
         </div>
-
         <div class="wrapper">
             <h3>Resaux</h3>
             <p><i class='bx bxl-instagram bx-sm'></i> @58_humanity</p>

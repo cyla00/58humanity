@@ -10,5 +10,7 @@ export interface ActionSchema {
     description: string,
     participants: Array<String>,
     places: Number,
+    address: string,
     date: string,
+    time: string
 }
