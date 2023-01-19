@@ -19,7 +19,7 @@ export default defineComponent({
             
             <h1>Action <br>  De La Semaine</h1>
             <h3><i class='bx bx-check'></i> {{this.titreAction}}</h3>
-            <h3 id="date">{{this.actionDate}}</h3>
+            <h3 id="date">ce {{this.actionDate}}</h3>
             <router-link to="/contact"><button>Participer à l'action</button></router-link>
         </div>
         

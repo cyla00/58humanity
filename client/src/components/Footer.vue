@@ -15,7 +15,7 @@ export default defineComponent({
     <footer>
         <div class="wrapper">
             <h3>Nous Rejoindre</h3>
-            <router-link to="/contact"><i class='bx bxs-donate-heart bx-sm'></i> Inscription</router-link>
+            <router-link to="/contact"><i class='bx bxs-donate-heart bx-sm'></i> Contact</router-link>
         </div>
 
         <div class="wrapper">
