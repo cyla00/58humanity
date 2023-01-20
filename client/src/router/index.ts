@@ -36,7 +36,10 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/admin',
     name: 'admin',
-    component: Admin
+    component: Admin,
+    beforeEnter(){
+        // check jwt 
+    }
   },
   {
     path: '/login',

@@ -6,7 +6,7 @@ export const listActions = new Router()
 listActions.post('/api/list-actions', async (ctx) => {
     const actions = db.collection<ActionSchema>("actions")
     
-    const list:any = [] 
+    const list:any = []
     await actions.find({}).forEach((res) => { list.push(res) })
     try{
         ctx.response.status = Status.OK

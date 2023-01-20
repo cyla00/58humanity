@@ -13,6 +13,7 @@ import { createAction } from './actions/createAction.ts'
 import { deleteAction } from './actions/deleteAction.ts'
 import { login } from './admin/login.ts'
 import { listActions } from './actions/listActions.ts'
+import { addParticipation } from './actions/addParticipation.ts'
 
 adminCheck()
 const app = new Application()
@@ -21,6 +22,7 @@ app.use(oakCors())
 app.use(login.routes(), login.allowedMethods())
 app.use(emailSender.routes(), emailSender.allowedMethods())
 app.use(listActions.routes(), listActions.allowedMethods())
+app.use(addParticipation.routes(), addParticipation.allowedMethods())
 
 app.use(jwtMiddleware)
 app.use(createAction.routes(), createAction.allowedMethods())

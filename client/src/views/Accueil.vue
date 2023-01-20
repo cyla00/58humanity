@@ -59,7 +59,7 @@ h3{
     text-transform: capitalize;
 }
 .date{
-    color: #73d9d9;
+    color: #37c8c8;
     font-size: 1rem;
 }
 button{
