@@ -61,4 +61,15 @@ a{
 a:hover{
     color: #73d9d9;
 }
+
+
+@media screen and (max-width: 1050px) {
+
+    footer{
+        position: relative;
+        bottom: 0;
+        display: grid;
+        grid-auto-columns: 1fr;
+    }
+}
 </style>

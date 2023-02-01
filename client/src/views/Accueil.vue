@@ -41,7 +41,6 @@ export default defineComponent({
 }
 img{
     width: 35em;
-    z-index: 1;
     margin: auto;
 }
 h1{
@@ -78,5 +77,37 @@ button:hover{
     transition: 0.1s;
     background: #73d9d9;
     color: #f26938;
+}
+
+
+
+@media screen and (max-width: 1050px) {
+
+    #wrapper{
+        height: 90vh;
+        grid-template-columns: 1fr;
+    }
+
+    img{
+        width: 20em;
+        margin: auto;
+    }
+    h1{
+        font-size: 50px;
+        font-weight: bold;
+        margin-block: 0.2em;
+    }
+    h3{
+        font-size: 20px;
+        margin: 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100%;
+        text-transform: capitalize;
+    }
+    #inner{
+        text-align: center;
+    }
 }
 </style>
